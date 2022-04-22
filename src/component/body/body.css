@@ -1,0 +1,62 @@
+.body {
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   align-items: center;
+}
+
+.image {
+   border-radius: 20px;
+   margin: 10px;
+   flex: 2;
+   background: url('https://www.lifewire.com/thmb/e0eip_EuL0MjlkH6JeGAWsxX0TQ=/650x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/best-search-engines-2483352-8cbda67ac96d4bc789f39e7ce61278d5.png');
+   width: 100px;
+   height: 300px;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   text-align: center;
+   animation-name: simple;
+   animation-duration: 5s;
+}
+
+@keyframes simple {
+   0% {
+      background-position: 50% 50%;
+      background: url('https://www.lifewire.com/thmb/e0eip_EuL0MjlkH6JeGAWsxX0TQ=/650x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/best-search-engines-2483352-8cbda67ac96d4bc789f39e7ce61278d5.png');
+   }
+
+   100% {
+      background-position: 100% 100%;
+      background: url('https://media.smallbiztrends.com/2022/01/social-audio.png');
+
+   }
+}
+
+.body p {
+   flex: 2;
+   margin: 10px;
+   font-size: 20px;
+   color: black;
+   text-shadow: 1px 1px 2px gray;
+   font-weight: 600;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+@media screen and (max-width:760px) {
+   .body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .body p {
+      margin-top: 20px;
+   }
+
+   .image {
+      display: none;
+   }
+}

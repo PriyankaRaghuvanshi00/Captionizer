@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router';
 import './App.css';
+import Body from './component/body/body';
+import Header from './component/header/header';
+import Keyword from './component/keyword/keyword';
+import Photo from './component/photo/photo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Header />
+      <p className='app-p'><bold>Captionizer: </bold> Automated caption suggestions</p>
+      <Routes>
+        <Route path='/photo' element={<Photo />}></Route>
+        <Route path='/keyword' element={<Keyword></Keyword>}></Route>
+        <Route path='/random' element={<h1>random</h1>}></Route>
+        <Route path='/' element={<Body ></Body>}></Route>
+      </Routes>
+    </div >
   );
 }
 
