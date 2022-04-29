@@ -1,7 +1,7 @@
 .quote {
    display: flex;
+   flex-wrap: wrap;
    flex-direction: column;
-   justify-content: center;
    max-width: 400px;
    background: linear-gradient(rgb(213, 241, 248), rgb(176, 227, 240), rgba(140, 221, 241, 0.58));
    border-radius: 50px;

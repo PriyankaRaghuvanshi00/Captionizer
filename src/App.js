@@ -4,6 +4,7 @@ import Body from './component/body/body';
 import Header from './component/header/header';
 import Keyword from './component/keyword/keyword';
 import Photo from './component/photo/photo';
+import Random from './component/random/random';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/photo' element={<Photo />}></Route>
         <Route path='/keyword' element={<Keyword></Keyword>}></Route>
-        <Route path='/random' element={<h1>random</h1>}></Route>
+        <Route path='/random' element={<Random></Random>}></Route>
         <Route path='/' element={<Body ></Body>}></Route>
       </Routes>
     </div >

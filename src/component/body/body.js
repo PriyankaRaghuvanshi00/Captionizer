@@ -1,12 +1,23 @@
 import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
 import { Route, Routes } from 'react-router'
 import "./body.css"
+import axios from 'axios'
+import { urlRandomOne } from "../../helper"
 
 export default function Body() {
+   const [quote, setquote] = useState("loading...")
+   useEffect(() => {
+      axios.get(urlRandomOne).then(res => {
+         setquote(res.data.content);
+      })
+   }, [])
+
    return (
       <div className='body'>
          <div className='image'></div>
-         <p>“I just want you to know that if you are out there and you are being really hard on yourself right now for something that has happened … it’s normal. That is what is going to happen to you in life. No one gets through unscathed. We are all going to have a few scratches on us. Please be kind to yourselves and stand up for yourself, please.”</p>
+         <p>{quote}</p>
       </div>
    )
 }
